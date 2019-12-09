@@ -149,40 +149,40 @@ let mySprite = sprites.create(img`
 . . . . . . 1 1 1 1 1 1 1 . . . 
 . . . . 1 1 1 1 1 1 1 1 1 1 1 . 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 1 
-. . . 1 1 1 1 f 1 1 1 1 f 1 1 1 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 1 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 1 
+. . . f 1 1 1 1 1 1 1 1 1 1 1 f 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 1 
-. . . 1 1 f f f f f f f f f f f 
-. . . 1 1 1 1 f f f f f f f f f 
-. . . 1 1 1 1 f f 2 2 2 2 2 2 f 
-. . . 1 1 1 1 1 1 2 2 2 2 2 2 f 
-. . . 1 1 1 1 1 1 1 2 2 2 2 2 1 
+. . . 1 1 f f f f f f f f f f 1 
+. . . 1 1 1 1 f f f f f f f f 1 
+. . . 1 1 1 1 f f 2 2 2 2 2 f 1 
+. . . 1 1 1 1 1 f 2 2 2 2 f 1 1 
+. . . 1 1 1 1 1 1 f f f f 1 1 1 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 1 
 . . . 1 1 1 1 1 1 1 1 1 1 1 1 . 
 . . . . 1 1 1 1 1 1 1 1 1 1 1 . 
 `, SpriteKind.Player)
 // controls sprite
-controller.moveSprite(mySprite)
+controller.moveSprite(mySprite, 125, 125)
 // makes the camera follow sprite through out sprite
 scene.cameraFollowSprite(mySprite)
 for (let index = 0; index < 10; index++) {
     mySprite2 = sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . 2 2 2 2 2 2 . . . . . . 
-. . . 2 2 2 2 f f f 2 2 . . . . 
-. . 2 2 2 f f 1 1 1 f 2 2 2 2 . 
-. . 2 2 f 1 1 1 1 1 1 f f 2 2 . 
-. . 2 f 1 1 1 1 f 1 1 1 1 f 2 . 
-. . 2 2 f f 1 1 1 1 1 f f 2 2 . 
-. . 2 2 2 2 f f f f f 2 2 2 2 . 
-. . . 2 2 2 2 2 2 2 2 2 2 2 2 . 
-. . . . 2 2 2 2 2 2 2 2 2 2 2 . 
-. . . . 2 2 2 2 2 2 2 2 2 2 . . 
-. . . . . . 2 2 2 2 2 2 2 2 . . 
-. . . . . . . 2 2 2 2 2 2 . . . 
-. . . . . . . . . 2 2 2 2 . . . 
-. . . . . . . . . . . . . . . . 
+. . . . . 2 2 2 2 2 2 2 . . . . 
+. . . . 2 2 2 2 2 2 2 2 2 . . . 
+. . . 2 2 2 2 f f f 2 2 2 2 . . 
+. . 2 2 2 2 f 1 1 1 f 2 2 2 2 . 
+. . . 2 2 f 1 1 f 1 1 f 2 2 . . 
+. . . 2 2 2 f 1 1 1 f 2 2 2 . . 
+. . . . 2 2 2 f f f 2 2 2 . . . 
+. . . . 2 2 2 2 2 2 2 2 2 . . . 
+. . . . 2 2 2 2 2 2 2 2 2 . . . 
+. . . . . 2 2 2 2 2 2 2 . . . . 
+. . . . . . 2 2 2 2 2 . . . . . 
+. . . . . . . 2 2 2 . . . . . . 
+. . . . . . . 2 2 2 . . . . . . 
+. . . . . . . . 2 . . . . . . . 
+. . . . . . . . 2 . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Food)
     mySprite2.setPosition(Math.randomRange(32, 380), Math.randomRange(100, 380))
